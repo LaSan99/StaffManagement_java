@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+
+	<!-- Login Servlet -->
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.example.controller.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Logout Servlet -->
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.example.controller.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/LogoutServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Staff Servlet -->
+	<servlet>
+		<servlet-name>StaffServlet</servlet-name>
+		<servlet-class>com.example.controller.StaffServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    <servlet-name>StaffServlet</servlet-name>
+    <url-pattern>/newStaff</url-pattern>
+    <url-pattern>/updateStaff</url-pattern>
+    <url-pattern>/deleteStaff</url-pattern>
+    <url-pattern>/listStaff</url-pattern>
+</servlet-mapping>
+
+
+	<!-- Leave Application Servlet -->
+	<servlet>
+		<servlet-name>LeaveApplicationServlet</servlet-name>
+		<servlet-class>com.example.controller.LeaveApplicationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LeaveApplicationServlet</servlet-name>
+		<url-pattern>/LeaveApplicationServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Leave Request Servlet -->
+	<servlet>
+		<servlet-name>LeaveRequestServlet</servlet-name>
+		<servlet-class>com.example.controller.LeaveRequestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LeaveRequestServlet</servlet-name>
+		<url-pattern>/leaveRequests</url-pattern>
+	</servlet-mapping>
+
+	<!-- View Leave Requests Servlet -->
+	<servlet>
+		<servlet-name>ViewLeaveRequestsServlet</servlet-name>
+		<servlet-class>com.example.controller.ViewLeaveRequestsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewLeaveRequestsServlet</servlet-name>
+		<url-pattern>/viewLeaveRequests</url-pattern>
+	</servlet-mapping>
+
+	<!-- Leave Status Servlet -->
+	<servlet>
+		<servlet-name>LeaveStatusServlet</servlet-name>
+		<servlet-class>com.example.controller.LeaveStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LeaveStatusServlet</servlet-name>
+		<url-pattern>/LeaveStatusServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Delete Leave Request Servlet -->
+	<servlet>
+		<servlet-name>DeleteLeaveRequestServlet</servlet-name>
+		<servlet-class>com.example.controller.DeleteLeaveRequestServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteLeaveRequestServlet</servlet-name>
+		<url-pattern>/DeleteLeaveRequestServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    <servlet-name>SearchLeaveRequestsServlet</servlet-name>
+    <servlet-class>com.example.controller.SearchLeaveRequestsServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+    <servlet-name>SearchLeaveRequestsServlet</servlet-name>
+    <url-pattern>/SearchLeaveRequestsServlet</url-pattern>
+	</servlet-mapping>
+	
+
+	<!-- Insert Staff Servlet -->
+	<servlet>
+		<servlet-name>InsertStaffServlet</servlet-name>
+		<servlet-class>com.example.controller.InsertStaffServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertStaffServlet</servlet-name>
+		<url-pattern>/insertStaff</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	    <!-- AssignTaskServlet Mapping -->
+    <servlet>
+        <servlet-name>AssignTaskServlet</servlet-name>
+        <servlet-class>com.staffmanagement.servlets.AssignTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AssignTaskServlet</servlet-name>
+        <url-pattern>/AssignTaskServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- EditTaskServlet Mapping -->
+    <servlet>
+        <servlet-name>EditTaskServlet</servlet-name>
+        <servlet-class>com.staffmanagement.servlets.EditTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditTaskServlet</servlet-name>
+        <url-pattern>/EditTaskServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- DeleteTaskServlet Mapping -->
+    <servlet>
+        <servlet-name>DeleteTaskServlet</servlet-name>
+        <servlet-class>com.staffmanagement.servlets.DeleteTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteTaskServlet</servlet-name>
+        <url-pattern>/DeleteTaskServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- TaskDashboardServlet Mapping -->
+    <servlet>
+        <servlet-name>TaskDashboardServlet</servlet-name>
+        <servlet-class>com.staffmanagement.servlets.TaskDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TaskDashboardServlet</servlet-name>
+        <url-pattern>/TaskDashboardServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Update Task Status Servlet -->
+	<servlet>
+    <servlet-name>UpdateTaskStatusServlet</servlet-name>
+    <servlet-class>com.example.controller.UpdateTaskStatusServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    <servlet-name>UpdateTaskStatusServlet</servlet-name>
+    <url-pattern>/UpdateTaskStatus</url-pattern> <!-- Ensure this matches the URL you're using -->
+	</servlet-mapping>
+
+
+
+    
+
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>
